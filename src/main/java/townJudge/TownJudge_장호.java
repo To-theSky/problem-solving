@@ -32,7 +32,22 @@ public class TownJudge_장호 {
 
     static class Solution {
         public int findJudge(int N, int[][] trust) {
-            return 0;
+            int n[][] = new int[N][2];
+            for (int i = 0; i < N; i++) {
+                n[i][0] = i + 1;
+            }
+
+            for (int i = 0; i < trust.length; i++) {
+                n[trust[i][0] -1][0] = 0;
+                n[trust[i][1] -1][1]++;
+            }
+
+            for (int[] ans : n) {
+                if (ans[0] != 0 && ans[1] == (N - 1)) {
+                    return ans[0];
+                }
+            }
+            return -1;
         }
     }
 }
