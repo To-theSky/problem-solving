@@ -1,8 +1,5 @@
 package deletingLetters;
 
-import java.util.ArrayDeque;
-import java.util.Stack;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeletingLetters_장호 {
