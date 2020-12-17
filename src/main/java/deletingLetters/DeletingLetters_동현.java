@@ -1,7 +1,8 @@
 package deletingLetters;
 
+import java.util.Arrays;
+
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.in;
 
 public class DeletingLetters_동현 {
     public static void main(String[] args) {
@@ -51,27 +52,18 @@ public class DeletingLetters_동현 {
             int ans = 0;
             int scope = findDuplicateScope(originString,c,index);
 
+            int[] rangeCost = Arrays.copyOfRange(cost, index, index + scope);
+            Arrays.sort(rangeCost);
+
             for(int i=0; i<scope-1; i++) {
-                ans +=calculateMinimun(cost,scope,index);
+                ans += rangeCost[i];
             }
+
             returnArray[0] = ans;
             returnArray[1] = scope;
             return returnArray;
         }
 
-        private int calculateMinimun(int[] cost, int scope, int index) {
-            return findCostMinimumGivenCost(cost,scope,index);
-        }
-
-        private int findCostMinimumGivenCost(int[] cost, int scope, int index) {
-            int min = cost[index];
-
-            for(int i=index; i<index+scope; i++) {
-                min = Math.min(min,cost[i]);
-            }
-
-            return min;
-        }
 
         private int findDuplicateScope(char[] originString, char c,int index) {
             int ans = 1;
