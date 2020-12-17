@@ -23,7 +23,21 @@ public class CurrentNumber_장호 {
 
     static class Solution {
         public int[] smallerNumbersThanCurrent(int[] nums) {
-            return null;
+            int length = nums.length;
+            int ans[] = new int[length];
+            int cnt = 0;
+
+            for (int i = 0; i < length; i++) {
+                for (int j = 0; j < length; j++) {
+                    if (nums[i] > nums[j]) {
+                        ++cnt;
+                    }
+                }
+                ans[i] = cnt;
+                cnt = 0;
+            }
+
+            return ans;
         }
     }
 }
