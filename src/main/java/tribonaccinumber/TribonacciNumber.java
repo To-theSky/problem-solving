@@ -1,0 +1,29 @@
+package tribonaccinumber;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class TribonacciNumber {
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        int input,output;
+
+        input = 4; output = 4;
+       assertThat(solution.tribonacci(input)).isEqualTo(output);
+
+        input = 25; output = 1389537;
+        assertThat(solution.tribonacci(input)).isEqualTo(output);
+    }
+
+    static class Solution {
+
+        public int tribonacci(int n) {
+
+        }
+    }
+}
