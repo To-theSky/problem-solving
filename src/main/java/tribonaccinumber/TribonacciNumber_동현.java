@@ -1,12 +1,11 @@
 package tribonaccinumber;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TribonacciNumber {
+public class TribonacciNumber_동현 {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
