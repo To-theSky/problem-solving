@@ -1,5 +1,8 @@
 package permutationString;
 
+import java.util.*;
+import java.util.stream.Collectors;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PermutationString_동현 {
@@ -17,6 +20,11 @@ public class PermutationString_동현 {
         s1 = "ab";
         s2 = "eidboaoo";
         output = false;
+        assertThat(solution.checkInclusion(s1, s2)).isEqualTo(output);
+
+        s1 = "abc";
+        s2 = "bbbca";
+        output = true;
         assertThat(solution.checkInclusion(s1, s2)).isEqualTo(output);
     }
 
