@@ -1,0 +1,12 @@
+
+*.bin
+
+.gradle/6.5/executionHistory/
+
+.gradle/6.5/fileContent/
+
+.idea/
+
+.gradle/
+
+build/
