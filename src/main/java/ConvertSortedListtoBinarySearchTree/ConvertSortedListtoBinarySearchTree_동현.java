@@ -1,7 +1,6 @@
 package ConvertSortedListtoBinarySearchTree;
 // https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
 
-import lettercombinationsofaphonenumber.LetterCombinationsOfAPhoneNumber;
 
 import java.util.ArrayList;
 import java.util.Collections;
